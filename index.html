@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Minimalist Web</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .background-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .background-animation div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 20px;
+            color: rgba(0, 0, 0, 0.1);
+            animation: move 10s linear infinite;
+        }
+        @keyframes move {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        .title {
+            z-index: 1;
+            font-size: 48px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-animation">
+        <div style="animation-duration: 10s;">!</div>
+        <div style="animation-duration: 12s;">@</div>
+        <div style="animation-duration: 14s;">#</div>
+        <div style="animation-duration: 16s;">$</div>
+        <div style="animation-duration: 18s;">%</div>
+        <div style="animation-duration: 20s;">^</div>
+        <div style="animation-duration: 22s;">&</div>
+        <div style="animation-duration: 24s;">*</div>
+        <div style="animation-duration: 26s;">(</div>
+        <div style="animation-duration: 28s;">)</div>
+    </div>
+    <div class="title">TheMinimalistWeb</div>
+</body>
+</html>
